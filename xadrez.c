@@ -29,7 +29,7 @@ int main() {
     // Inclua o uso de continue e break dentro dos loops.
 
     int torre = 1;
-    int bispo = 1; 
+    int bispo = 0; 
     int rainha = 1;
     int casas;
 
@@ -41,6 +41,26 @@ int main() {
         printf("Direita\n");
         torre++;
     }
+
+    printf("Andar quantas casas com o bispo? ");
+    scanf("%d", &casas);
+
+    do
+    {
+        bispo++;
+        printf("Cima\n");
+        printf("Direita\n");
+    } while (bispo < casas);
+
+    printf("Andar quantas casas com a rainha? ");
+    scanf("%d", &casas);
+
+    for (int i = 0; i < casas; i++)
+    {
+        printf("Esquerda\n");
+    }
+    
+    
     
 
     return 0;
