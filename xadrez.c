@@ -4,6 +4,36 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+void recursivoTorre(int torre)
+{
+    if (torre > 0)
+    {
+        printf("Direita\n");
+        recursivoTorre(torre - 1);
+    }
+}
+
+void recursivoBispo(int bispo)
+{
+    for (int i = bispo; i > 0; i--)
+    {
+        printf("Cima\n");
+        for (int j = 1; j > 0; j--)
+        {
+            printf("Direita\n");
+        }
+    }
+}
+
+void recursivoRainha(int rainha)
+{
+    if (rainha > 0)
+    {
+        printf("Esquerda\n");
+        recursivoRainha(rainha - 1);
+    }
+}
+
 int main()
 {
     // Nível Novato - Movimentação das Peças
@@ -29,34 +59,26 @@ int main()
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
-    int torre = 1;
-    int bispo = 0;
-    int rainha = 1;
+    int torre = 5;
+    int bispo = 3;
+    int rainha = 8;
     int movimentoCompleto = 1;
 
-    while (torre <= 5)
-    {
-        printf("Direita\n");
-        torre++;
-    }
 
-    do
-    {
-        bispo++;
-        printf("Cima\n");
-        printf("Direita\n");
-    } while (bispo < 3);
+    printf("Torre: \n");
+    recursivoTorre(torre);
+    printf("\n");
 
-    for (int i = 0; i < 2; i++)
-    {
-        printf("Esquerda\n");
-    }
+    printf("Bispo:\n");
+    recursivoBispo(bispo);
+    printf("\n");
 
+    printf("Rainha:\n");
+    recursivoRainha(rainha);
     printf("\n");
 
     while (movimentoCompleto--)
     {
-
         for (int i = 0; i < 2; i++)
         {
             printf("Baixo\n");
