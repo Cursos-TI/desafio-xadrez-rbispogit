@@ -62,7 +62,7 @@ int main()
     int torre = 5;
     int bispo = 3;
     int rainha = 8;
-    int movimentoCompleto = 1;
+    int cavalo = 10;
 
 
     printf("Torre: \n");
@@ -77,6 +77,16 @@ int main()
     recursivoRainha(rainha);
     printf("\n");
 
+    printf("Cavalo:\n");
+    for(int i = 0, j = cavalo; i < cavalo && j > 0; i++, j--)
+    {
+        printf("Cima\n");
+    }
+    printf("Direita\n");
+
+
+
+    /*
     while (movimentoCompleto--)
     {
         for (int i = 0; i < 2; i++)
@@ -85,7 +95,7 @@ int main()
         }
 
         printf("Esquerda.\n");
-    }
+    }*/
 
     return 0;
 }
