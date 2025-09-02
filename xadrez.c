@@ -4,6 +4,7 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+// Funcao da torre
 void recursivoTorre(int torre)
 {
     if (torre > 0)
@@ -13,6 +14,7 @@ void recursivoTorre(int torre)
     }
 }
 
+// Funcao do bispo
 void recursivoBispo(int bispo)
 {
     for (int i = bispo; i > 0; i--)
@@ -25,6 +27,7 @@ void recursivoBispo(int bispo)
     }
 }
 
+// Funcao da rainha
 void recursivoRainha(int rainha)
 {
     if (rainha > 0)
@@ -64,7 +67,7 @@ int main()
     int rainha = 8;
     int cavalo = 10;
 
-
+    // Estrutura que chama as funcoes
     printf("Torre: \n");
     recursivoTorre(torre);
     printf("\n");
@@ -77,25 +80,13 @@ int main()
     recursivoRainha(rainha);
     printf("\n");
 
+    // Estrutura do cavalo usando condicoes multiplas
     printf("Cavalo:\n");
-    for(int i = 0, j = cavalo; i < cavalo && j > 0; i++, j--)
+    for (int i = 0, j = cavalo; i < cavalo && j > 0; i++, j--)
     {
         printf("Cima\n");
     }
     printf("Direita\n");
-
-
-
-    /*
-    while (movimentoCompleto--)
-    {
-        for (int i = 0; i < 2; i++)
-        {
-            printf("Baixo\n");
-        }
-
-        printf("Esquerda.\n");
-    }*/
 
     return 0;
 }
